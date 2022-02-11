@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 import LandingPage from "./components/LandingPage";
 import { Signup, Login } from './components/Auth'
 
-export default () => (
+const AppRoutes = () => (
   <Routes>
     <Route path="/" element={<LandingPage/>} />
     <Route path="/signup" element={<Signup/>} />
@@ -11,3 +11,4 @@ export default () => (
   </Routes>
 );
 
+export default AppRoutes

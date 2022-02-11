@@ -6,7 +6,7 @@ import SwoopContainer from "./SwoopContainer";
 const content =
   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum mattis orci semper lacinia. Sed viverra, augue vitae pulvinar porta, est sem gravida turpis, fermentum pretium nunc libero sit amet mauris. Suspendisse facilisis commodo lacus, vehicula rhoncus quam pretium eu. Donec sed sem a magna eleifend fringilla. Praesent non massa at mi placerat fringilla. Nulla viverra, orci et mattis ultricies, felis eros hendrerit massa, ut vehicula erat nisi quis urna. Aliquam erat volutpat. Donec ut eros mattis, tempus tortor vitae, varius eros. Nullam commodo mattis velit a commodo.";
 
-export default () => {
+const LandingPage = () => {
   return (
     <Box sx={{ paddingTop: "3rem" }}>
       <SwoopContainer
@@ -45,3 +45,5 @@ export default () => {
     </Box>
   );
 };
+
+export default LandingPage
