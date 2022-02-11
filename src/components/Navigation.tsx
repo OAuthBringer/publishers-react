@@ -4,7 +4,6 @@ import Box from "@mui/material/Box";
 import logo from "../img/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
 import batPill from "../img/built-with-bat-pill.svg";
-import Typography from "@mui/material/Typography";
 import Button, { ButtonProps } from "@mui/material/Button";
 
 const NavButton = (props: ButtonProps) => (
