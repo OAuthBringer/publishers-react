@@ -1,15 +1,19 @@
 import React from "react";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { h1, h2, h3, h4, h5, h6, a } from 'brave-ui/shared/typography'
 
 const primary = "#FFFFFF";
 const secondary = "#2C3333";
 
 export const theme = createTheme({
   typography: {
-    h1: { fontSize: "50px", fontWeight: 600 },
-    h2: { fontSize: "34px", fontWeight: 600 },
-    h4: { fontWeight: 400 },
-    button: { textTransform: "none" },
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    a,
   },
   overrides: {
     MuiInputBase: {

@@ -15,7 +15,7 @@ import AccountCircle from "@material-ui/icons/AccountCircle";
 import MailIcon from "@material-ui/icons/Mail";
 import NotificationsIcon from "@material-ui/icons/Notifications";
 import MoreIcon from "@material-ui/icons/MoreVert";
-import Logo from "../Logo";
+import Logo, { BatLogo } from "../Logo";
 
 const Search = styled("div")(({ theme }) => ({
   position: "relative",

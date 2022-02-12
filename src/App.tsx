@@ -24,6 +24,11 @@ function App() {
             {isLanding && <LandingHeader />}
             {isDashboard && <AppBar />}
           </header>
+          {isDashboard && (
+            <Box className="fade-top">
+              <SwoopTop />
+            </Box>
+          )}
           <Routes />
           {!isRoot && (
             <Box className="fade">
