@@ -3,9 +3,11 @@ import Box from "@mui/material/Box";
 import Typography from "@mui/material/Typography";
 import Button from "@mui/material/Button";
 import TextField from "@mui/material/TextField";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 export const Login = () => {
+  const navigate = useNavigate();
+
   return (
     <Box display="inline">
       <Box
@@ -21,7 +23,7 @@ export const Login = () => {
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. In mi metus,
         </Typography>
         <TextField variant="filled" style={{ width: "30rem" }} />
-                <Button variant="contained">Lorem Ipsum</Button>
+                <Button variant="contained" onClick={() => navigate("/dashboard")}>Lorem Ipsum</Button>
         <Link to="/login">Lorum Ipsum, Lorum Ipsum? </Link>
         <Box display="flex" flexDirection="row">
           <Link to="/login">Lorum IpsumLorum Ipsum? </Link>
