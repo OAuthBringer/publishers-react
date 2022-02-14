@@ -27,7 +27,7 @@ const useStyles = makeStyles((theme: Theme) =>
   })
 );
 
-const SwoopBottom = () => (
+export const SwoopBottom = () => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 1430 140"
@@ -38,7 +38,7 @@ const SwoopBottom = () => (
   </svg>
 );
 
-const SwoopTop = () => (
+export const SwoopTop = () => (
   <svg
     viewBox="0 0 1430 140"
     className="top-swoop"

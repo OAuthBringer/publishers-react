@@ -1,16 +1,16 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
 import Box from "@mui/material/Box";
-import logo from "../img/logo.svg";
 import { Link, useNavigate } from "react-router-dom";
-import batPill from "../img/built-with-bat-pill.svg";
+import Logo, { BatPill} from '../Logo'
 import Button, { ButtonProps } from "@mui/material/Button";
+import { useAppContext } from "../../AppContext";
 
 const NavButton = (props: ButtonProps) => (
   <Button sx={{ fontWeight: 600 }} {...props} />
-);
+)
 
-const Navigation = () => {
+export const Header = () => {
   const navigate = useNavigate();
 
   return (
@@ -22,14 +22,8 @@ const Navigation = () => {
         justifyContent="space-between"
       >
         <Grid item>
-          <Link to="/">
-            <img src={logo} className="App-logo" alt="logo" />
-          </Link>
-          <Box style={{ paddingLeft: "2rem" }} display="inline">
-            <a href="https://basicattentiontoken.org/">
-              <img src={batPill} className="App-logo" alt="bat-pill" />
-            </a>
-          </Box>
+          <Logo/>
+          <BatPill/>
         </Grid>
         <Grid item>
           <NavButton onClick={() => navigate("/signup")} variant="text">
@@ -43,5 +37,3 @@ const Navigation = () => {
     </Box>
   );
 };
-
-export default Navigation;
