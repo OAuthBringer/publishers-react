@@ -12,6 +12,8 @@ const NavButton = (props: ButtonProps) => (
 
 export const Header = () => {
   const navigate = useNavigate();
+  const host = encodeURIComponent("localhost:2222")
+  const url = encodeURIComponent("http://localhost:2222/dashboard")
 
   return (
     <Box sx={{ width: "95%" }}>
@@ -29,9 +31,11 @@ export const Header = () => {
           <NavButton onClick={() => navigate("/signup")} variant="text">
             sign up
           </NavButton>
-          <NavButton onClick={() => navigate("/login")} variant="outlined">
-            login
-          </NavButton>
+          <a href={`https://app.unlock-protocol.com/checkout?client_id=${host}&redirect_uri=${url}`}>
+            <NavButton variant="outlined">
+              login
+            </NavButton>
+          </a>
         </Grid>
       </Grid>
     </Box>

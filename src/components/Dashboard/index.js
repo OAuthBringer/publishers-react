@@ -6,6 +6,7 @@ import Typography from "@mui/material/Typography";
 import Logo, { BatLogo } from "../Logo";
 import { createTheme, ThemeProvider, styled } from "@mui/material/styles";
 import Card, { BasicCard } from "./Card";
+import { utils } from 'ethers'
 
 const Item = styled(Paper)(({ theme }) => ({
   ...theme.typography.body2,
@@ -46,6 +47,17 @@ const AccountBalance = () => {
 };
 
 export default function Elevation() {
+  const urlSearchParams = new URLSearchParams(window.location.search);
+  const params = Object.fromEntries(urlSearchParams.entries());
+  const code = JSON.parse(atob(params.code));
+
+  // The code object has 2 properties:
+  // d: digest (the signed string)
+  // s: signature (the signature)
+  const address = utils.verifyMessage(code.d, code.s)
+  const publicKey = utils.recoverPublicKey(address, code.s)
+  console.log({code, address, params, publicKey})
+
   return (
     <Box>
       <Grid container spacing={2} justifyContent="center">
